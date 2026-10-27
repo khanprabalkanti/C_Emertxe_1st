@@ -34,7 +34,6 @@ int main()
     printf(" 7.Chicken Cutlet     7.Butter Chicken       7.Vanilla Ice Cream\n");
     printf(" 8.Spring Roll        8.Chole Bhature        8.Choco Lava Cake\n");
     printf(" -----------------------------------------------------------------\n");
-
     printf("Enter your option: \n");
     printf("------------------\n");
     printf("\tA. Beverages\n");
@@ -47,7 +46,9 @@ int main()
     printf("Your Option: ");
     scanf("%c", &meal_option);
     printf("------------------\n");
-
+    
+do
+{
     switch (meal_option)
     {
     case 'A':
@@ -72,6 +73,8 @@ int main()
         printf("\tAdd Item: ");
         scanf("%d", &item_option);
         printf(" -----------------------------------------------------------------\n");
+        if(item_option == 9)
+            break;
         switch (item_option)
         {
         case 1:
@@ -224,36 +227,7 @@ int main()
         printf(" -----------------------------------------------------------------\n");
         break;
     }
-
-    /*  int option;
-     printf("<----------Welcome to Emertxe Caffe--------->\n");
-     printf("\t1.Pizza\n\t2.Biryani\n\t3.Pasta\n\t4.Coffee\n\t5.Milk Tea\n\t6.Raw Tea\n");
-     printf("\tEnter your option: ");
-     scanf("%d", &option);
-     switch (option)
-     {
-     case 1:
-         printf("\tYou orderd Pizza\n");
-         break;
-     case 2:
-         printf("\tYou orderd Biryani\n");
-         break;
-     case 3:
-         printf("\tYou orderd Pasta\n");
-         break;
-     case 4:
-         printf("\tYou orderd Coffee\n");
-         break;
-     case 5:
-         printf("\tYou orderd Milk Tea\n");
-         break;
-     case 6:
-         printf("\tYou orderd Raw Tea\n");
-         break;
-
-     default:
-     printf("Sorry! No option available\n");
-         break;
-     } */
+}while(item_option >= 1 && item_option <= 10);
+    
     return 0;
 }
