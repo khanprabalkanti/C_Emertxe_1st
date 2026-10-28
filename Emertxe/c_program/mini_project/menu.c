@@ -52,7 +52,7 @@ int main()
         printf("\tG. Make Order\n");
         printf("------------------\n");
         printf("Your Option: ");
-        scanf(" %c", &meal_option);
+        scanf(" %c", &meal_option); //***without space, it is not working.
         printf("------------------\n");
 
         switch (meal_option)

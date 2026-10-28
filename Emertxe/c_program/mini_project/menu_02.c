@@ -1,3 +1,9 @@
+/*
+Description: Mini Project2, Cafe menu.
+Date and Day: 27-10-2026, Tuesday
+Sample I/P:
+Sample O/P:
+ */
 #include <stdio.h>
 int main()
 {
