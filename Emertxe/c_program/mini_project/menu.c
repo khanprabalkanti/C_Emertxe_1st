@@ -724,7 +724,7 @@ int main()
             else
             {
                 printf(" -----------------------------------------------------------------\n");
-                printf("\t Please add atleast one item!\n");
+                printf("\t Please add atleast one item!\n");//***(if nothing is in the cart, want to run the loop again to add items.) What will be the logic here?
                 printf(" -----------------------------------------------------------------\n");
             }
             break;
