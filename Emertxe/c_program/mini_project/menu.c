@@ -50,6 +50,8 @@ int main()
         printf("\tF. Desserts\n");
         printf("------------------\n");
         printf("\tG. Make Order\n");
+        printf("\tX. Exit\n");
+        a://goto label
         printf("------------------\n");
         printf("Your Option: ");
         scanf(" %c", &meal_option); //***without space, it is not working.
@@ -724,8 +726,9 @@ int main()
             else
             {
                 printf(" -----------------------------------------------------------------\n");
-                printf("\t Please add atleast one item!\n");//***(if nothing is in the cart, want to run the loop again to add items.) What will be the logic here?
+                printf("\t Please add atleast one item!\n"); //***(if nothing is in the cart, want to run the loop again to add items.) What will be the logic here?
                 printf(" -----------------------------------------------------------------\n");
+                goto a; //goto the main menu
             }
             break;
         }
