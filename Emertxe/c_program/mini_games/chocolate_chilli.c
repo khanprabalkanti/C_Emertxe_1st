@@ -1,43 +1,38 @@
+/*
+Name - Prabal kanti khan
+Description: Mini Game, Chocolate chili game.
+Date and Day: 31-10-2026, Saturday
+Sample I/P:
+Sample O/P:
+ */
 #include <stdio.h>
 int main()
 {
-    int player1, player2, choco = 13;
+    int player = 1, choco = 13, pick;
     while (choco > 0)
     {
-        printf("Remaining Chocolates = %d\n", choco);
-        printf("Player 1 turn: \n");
-        printf("Pick chocolates (1 to 3): ");
-        scanf("%d", &player1);
-        if (player1 < 1 || player1 > 3)
+        printf("Chocolates remaining = %d\n", choco);
+        printf("Player %d turn\n", player);
+        printf("Pick chocolates (1 to 3) = ");
+        scanf("%d", &pick);
+
+        if(pick < 1 || pick > 3 || pick > choco)
         {
-            printf("Wrong Pick! Try again!\n");
+            printf("Invalid Input!\n");
             return 1;
         }
-        choco -= player1;
-        if (choco == 0)
+        choco -= pick;
+        if(choco == 0)
         {
-            printf("Player 1 picked the last chocolate!\n");
-            printf("Player 1 LOST!\n");
-            printf("Player 2 WON!\n");
-            break;
+            printf("Only Chilly remains!\n");
+            player = player == 1 ? 2 : 1;
+            printf("Player %d gets chilly!\n", player);
+            printf("Player %d LOST!\n", player);
+            player = player == 2 ? 1 : 2;
+            printf("Player %d WON!\n", player);
         }
-        printf("Remaining Chocolates = %d\n", choco);
-        printf("Player 2 turn: \n");
-        printf("Pick chocolates (1 to 3): ");
-        scanf("%d", &player2);
-        if (player2 < 1 || player2 > 3)
-        {
-            printf("Wrong Pick! Try again!\n");
-            return 1;
-        }
-        choco -= player2;
-        if (choco == 0)
-        {
-            printf("Player 2 picked the last chocolate!\n");
-            printf("Player 2 LOST!\n");
-            printf("Player 1 WON!\n");
-            break;
-        }
+
+        player = player == 1 ? 2 : 1;
     }
     return 0;
 }
