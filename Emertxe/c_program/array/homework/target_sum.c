@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int size, target;
+    int size, target, flag = 1;
     printf("Enter array size: ");
     scanf("%d", &size);
     printf("Enter array elements: \n");
@@ -14,24 +14,19 @@ int main()
     scanf("%d", &target);
     for(int i = 0; i < size; i++)
     {
-        int sum = arr[i];
-        for(int j = 0; j < size; j++)
+        for(int j = i + 1; j < size; j++)
         {
-            if(i == j || target < arr[j])
-            {
-                continue;
-            }
-            sum += arr[j];
-            if(sum == target)
-            {
-                printf("Found = > %d %d\n", j, i);
-                break;
-            }
-            else if(sum > target)
-            {
-                sum -= arr[j];
-            }
+           if(arr[i] + arr[j] == target)
+           {
+            printf("arr[%d] + arr[%d] => %d + %d\n", i, j, arr[i], arr[j]);
+            flag = 0;
+            break;
+           }
         }
+    }
+    if(flag)
+    {
+        printf("Not found\n");
     }
     return 0;
 }

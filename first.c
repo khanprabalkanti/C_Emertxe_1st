@@ -5,7 +5,9 @@ int main(){
     return 0;
 } */
 #include <stdio.h>
-int main(){
+int main()
+{
+    float num1, num2;
     /* int totalDigit = 0, num;
     printf("Enter number: ");
     scanf("%d", &num);
@@ -21,7 +23,7 @@ int main(){
     // printf("%#x\n", num);
     // printf("%c\n", num);
 
-    double n[2] = {4.0,2.0};
-    printf("%x\n", &n[0] - &n[1]);
-
+    printf("scanf returned: %f\n", scanf("%f%f", &num1, &num2));
+    int result = printf("\t");
+    printf("printf returned: %d\n", result);
 }
